@@ -12,6 +12,13 @@
         b.new {
             color: green;
         }
+        b.pro {
+            color: blue;
+        }
+        
+        b.old {
+            color: red;
+        }
     </style>
 </head>
 
@@ -29,10 +36,11 @@
                 Access Protocol) server. It runs as a Windows service and provides a directory for authenticating users
                 on a network. It’s a lightweight alternative to a full Active Directory server and will only be useful
                 on certain business networks.</p>
-            <p><b class="new">Containers</b>:</p>
-            <p><b class="new">Data Center Bridging</b>:</p>
-            <p><b class="new">Device Lockdown</b>:</p>
-            <p><b class="new">Guarded Host</b>:</p>
+            <p><b class="new">Containers</b>: This includes everything you need to create containers on your Windows 10 machine. They are tools that allow apps to run in their isolated boxes, with no knowledge of anything outside that box.</p>
+            <p>Documentation: <a href="https://docs.microsoft.com/en-us/virtualization/windowscontainers/about/">Windows and containers</a></p>
+            <p><b class="pro">Data Center Bridging</b>: a series of standards developed by IEEE (Institute of Electrical and Electronics Engineers) for data centers. They include standards for storage, data networking, inter-process communication, and management traffic that all share the same Ethernet infrastructure.</p>
+            <p><b class="new">Device Lockdown</b>: This lets you install and run services and tools that provide a specialized user interface. In common words, it lets you run your Windows 10 device in a kiosk machine, for example.</p>
+            <p><b class="new">Guarded Host</b>: allows administrators to run shielded virtual machines on Hyper-V so that they can secure them and block access to the attacks coming from malware or other malicious threats.</p>
             <p><b>Hyper-V</b>: This is Microsoft’s virtualization tool. It includes the underlying platform and services
                 and a graphical Hyper-V Manager tool for creating, managing, and using virtual machines. </p>
             <p><b>Internet Explorer 11</b>: If you don’t need Microsoft’s legacy web browser, you can disable access to
@@ -60,15 +68,17 @@
                 support for the LPD and LPR network printing protocols, although these are older and not as
                 common–you’ll only need them if you have to connect to a network printer requiring them. The Scan
                 Management feature here is for managing and monitoring scanners connected to a network. </p>
-            <p><b class="new">Remote Differential Compression API Support</b>:</p>
-            <p><b class="new">Service for NFS</b>:</p>
+            <p><b class="pro">Remote Differential Compression API Support</b>: This is a synchronization algorithm that allows fast comparisons between synchronized files, which detects the data removed or added from their contents.</p>
+            <p><b class="pro">Service for NFS</b>: This provides Network File system (NFS) protocol support. If you have and use a NAS (Network Attached Storage), you probably want this feature to be enabled.</p>
+            <p>Documentation: <a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/services-for-network-file-system-command-reference">Services for Network File System Command Reference</a></p>
             <p><b>Simple TCPIP Services (i.e. echo, daytime etc)</b>: This includes a few optional network services. The
                 “echo” service could potentially be useful for network troubleshooting on some business networks, but
                 otherwise these won’t be useful. </p>
             <p><b>SMB 1.0/CIFS File Sharing Support</b>: This enables file and printer sharing with older versions of
                 Windows, ranging from Windows NT 4.0 to Windows XP and Windows Server 2003 R2. Linux and Mac operating
                 systems may also use the older SMB protocol for file and printer sharing. </p>
-            <p><b class="new">SMB Direct</b>:</p>
+            <p><b class="new">SMB Direct</b>: This supports the use of RDMA network adapters. For workloads such as Hyper-V or Microsoft SQL Server, this enables a remote file server to resemble local storage.</p>
+            <p>Documentation: <a href="https://docs.microsoft.com/en-us/windows-server/storage/file-server/smb-direct">SMB Direct</a></p>
             <p><b>Telnet Client</b>: This provides a telnet command that allows you to remotely connect to the
                 command-line interface on computers and devices running a telnet server. Telnet is old and not secure.
                 You really shouldn’t be using telnet over the network these days, but this could be useful when
@@ -76,9 +86,12 @@
             <p><b>TFTP Client</b>: This provides a tftp command that allows you to transfer files to computers and
                 devices using the Trivial File Transfer Protocol. TFTP is also old and not secure, so you really
                 shouldn’t be using it either. But you may have to use it with some ancient devices. </p>
-            <p><b class="new">Virtual Machine Platform</b>:</p>
-            <p><b class="new">Windows Defender Application Guard</b>:</p>
-            <p><b class="new">Windows Hypervisor Platform</b>:</p>
+            <p><b class="new">Virtual Machine Platform</b>: This is a (possibly temporary) repackaging of existing Hyper-V components. It supports Windows Subsystem for Linux (WSL) 2, which needs to run it's own Linux kernel (as opposed to WSL1, which leverages Windows API)</p>
+            <p>Availability: Windows 10 October 2018 Update or later</p>
+            <p><b class="new">Windows Defender Application Guard</b>: This puts Microsoft Edge or IE in an isolated, virtualized container when you visits an unsafe site. With this enabled, even if a malicious website exploited a flaw in Edge or IE, it couldn’t compromise your PC.</p>
+            <p><b class="new">Windows Hypervisor Platform</b>: Windows Hypervisor Platform (WHPX) enables third-party virtualization stacks to utilize the Windows Hypervisor for hardware acceleration. It enables Android emulator, VirtualBox and QEMU (and VMWare in the future) to run in hardware accelerated mode (or run at all), without needing to disable Hyper-V.</p>
+            <p>Documentation: <a href="https://docs.microsoft.com/en-us/virtualization/api/">Windows Hypervisor Platform</a></p>
+            <p>Availability: Windows April 2018 Update or later</p>
             <p><b>Windows Identity Foundation 3.5</b>: Older .NET applications may still require this, but .NET 4
                 includes a new identity framework. You’ll only need to install this if you need to run an older .NET
                 application that needs it. </p>
@@ -86,8 +99,11 @@
                 the old Command Prompt. It’s enabled by default, but you can disable PowerShell, if you like. </p>
             <p><b>Windows Process Activation Service</b>: This is related to the Internet Information Services web
                 server. You’ll only need it if you run a server application that requires it. </p>
-            <p><b class="new">Windows Projected File System</b>:</p>
-            <p><b class="new">Windows Sandbox</b>:</p>
+            <p><b class="new">Windows Projected File System</b>: The Windows Projected File System (ProjFS) allows a user-mode application to project hierarchical data into the file system, making it appear as files and directories in the file system. The primary use of ProjFS is Microsoft's "Git Virtual File System", an addon to the Git version management tool aimed at increasing its performance and reducing disk space usage when dealing with massive repositories. It has potential uses in implementing virtual filesystems such as sshfs and ftpfs in the future.</p>
+            <p>Documentation: <a href="https://docs.microsoft.com/en-us/windows/win32/projfs/projected-file-system">Windows Projected File System (ProjFS)</a></p>
+            <p><b class="new">Windows Sandbox</b>: Windows Sandbox is a new lightweight desktop environment tailored for safely running applications in isolation.</p>
+            <p>Documentation: <a href="https://techcommunity.microsoft.com/t5/Windows-Kernel-Internals/Windows-Sandbox/ba-p/301849">Windows Sandbox</a></p>
+            <p>Availability: Windows 10 Pro or Enterprise Insider build 18305 or later; Windows 10 Pro or Enterprise May 2019 Update or later</p>
             <p><b>Windows Subsystem for Linux</b>: In Windows 10’s Anniversary Update, this service enables you to use
                 the Ubuntu Bash shell and run Linux applications on Windows 10. </p>
             <p><b>Windows TIFF iFilter</b>: This feature enables the Windows indexing service to analyze .TIFF files and
@@ -100,27 +116,27 @@
         </section>
         <section>
             <h3>removed features</h3>
-            <p><b>Embedded Shell Launcher</b>: This feature is required if you want to replace Windows 10’s Explorer.exe
+            <p><b class="old">Embedded Shell Launcher</b>: This feature is required if you want to replace Windows 10’s Explorer.exe
                 shell with a custom shell. Microsoft’s documentation recommends using this feature for setting up a
                 traditional Windows desktop application in kiosk mode. </p>
-            <p><b>Isolated User Mode</b>: A new feature in Windows 10, this allows applications to run in a secure,
+            <p><b class="old">Isolated User Mode</b>: A new feature in Windows 10, this allows applications to run in a secure,
                 isolated space if they’re programmed to do so. You only need this a program you need to use requests or
-                requires it. Here’s a video with more technical details. </p>
-            <p><b>RAS Connection Manager Administration Kit (CMAK)</b>: This tool allows you to create custom remote
+                requires it. </p>
+            <p><b class="old">RAS Connection Manager Administration Kit (CMAK)</b>: This tool allows you to create custom remote
                 access profiles for VPNs. Unless you know you need this to administer a network, you don’t need it.
                 Remote Differential Compression API Support: This provides a fast algorithm for comparing synchronized
                 files. Like many other features, it’s only useful if an application specifically requires it RIP
                 Listener: This service listens for Routing Information Protocol announcements sent by routers. It’s only
                 useful if you have a router that supports the RIPv1 protocol. This may be useful on a corporate network,
                 but won’t be useful at home. </p>
-            <p><b>Simple Network Management Protocol (SNMP)</b>: This is an old protocol for managing routers, switches,
+            <p><b class="old">Simple Network Management Protocol (SNMP)</b>: This is an old protocol for managing routers, switches,
                 and other network devices. It’s only useful if you work in an environment that uses this old protocol.
             </p>
-            <p><b>XPS Services</b>: This enables printing to XPS documents. Microsoft created this document format with
+            <p><b class="old">XPS Services</b>: This enables printing to XPS documents. Microsoft created this document format with
                 Windows Vista and it never took off, so you’re better off printing to PDF instead. Turn off this feature
                 and the XPS printer will vanish from your list of installed printers (though you can also just
                 right-click the XPS Printer in the Devices & Printers window and select “Remove Device”). </p>
-            <p><b>XPS Viewer</b>: This application allows you to view XPS documents. </p>
+            <p><b class="old">XPS Viewer</b>: This application allows you to view XPS documents. </p>
         </section>
     </main>
 </body>
