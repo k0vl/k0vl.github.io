@@ -8,95 +8,120 @@
     <meta name="description" content="Karl's Personal Website">
     <link rel="stylesheet" type="text/css" href="../main.css">
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans">
+    <style>
+        b.new {
+            color: green;
+        }
+    </style>
 </head>
 
 <body>
     <main>
         <h2>Windows Features in Windows 10 Education 1903</h2>
-        <p> <b>.NET Framework 3.5 (includes .NET 2.0 and 3.0)</b>: You’ll need this installed to run applications
-            written for these versions of .NET. Windows will automatically install them if an application requires them.
-        </p>
-        <p> <b>.NET Framework 4.6 Advanced Services</b>: These features are also automatically installed if necessary.
-            They’re only necessary to run applications that require them. </p>
-        <p> <b>Active Directory Lightweight Directory Services</b>: This provides an LDAP (Lightweight Directory Access
-            Protocol) server. It runs as a Windows service and provides a directory for authenticating users on a
-            network. It’s a lightweight alternative to a full Active Directory server and will only be useful on certain
-            business networks. </p>
-        <p> <b>Embedded Shell Launcher</b>: This feature is required if you want to replace Windows 10’s Explorer.exe
-            shell with a custom shell. Microsoft’s documentation recommends using this feature for setting up a
-            traditional Windows desktop application in kiosk mode. </p>
-        <p> <b>Hyper-V</b>: This is Microsoft’s virtualization tool. It includes the underlying platform and services
-            and a graphical Hyper-V Manager tool for creating, managing, and using virtual machines. </p>
-        <p> <b>Internet Explorer 11</b>: If you don’t need Microsoft’s legacy web browser, you can disable access to
-            Internet Explorer entirely. </p>
-        <p> <b>Internet Information Services</b>: This provides Microsoft’s IIS web and FTP servers along with tools for
-            managing the servers. </p>
-        <p> <b>Internet Information Services Hostable Web Core</b>: This allows applications to host a web server using
-            IIS inside their own process. You only need this installed if you need to run an application that requires
-            it. </p>
-        <p> <b>Isolated User Mode</b>: A new feature in Windows 10, this allows applications to run in a secure,
-            isolated space if they’re programmed to do so. You only need this a program you need to use requests or
-            requires it. Here’s a video with more technical details. </p>
-        <p> <b>Legacy Components (DIrectPlay)</b>:DirectPlay was part of DirectX, and was used for networking and
-            multiplayer gaming by some games. Windows 10 should automatically install it when you install an old game
-            that requires DIrectPlay. </p>
-        <p> <b>Media Features (Windows Media Player)</b>: You can disable access to Windows Media Player from here, if
-            you have no use for it. </p>
-        <p> <b>Microsoft Message Queue (MSMO) Server</b>: This old service improves communications on unreliable
-            networks by queuing messages rather than sending them immediately. This is only useful if you have a
-            business application that specifically requires and uses this feature. </p>
-        <p> <b>Microsoft Print to PDF</b>: Windows 10’s included PDF printer can be disabled from here, if you like (but
-            it’s so useful, we don’t know why you would). </p>
-        <p> <b>MultiPoint Connector</b>: This allows your computer to be monitored and managed by the MultiPoint Manager
-            and Dashboard applications. It’s only useful on corporate networks, and only if those networks use these
-            management tools. </p>
-        <p> <b>Print and Document Services</b>: The Internet Printing Client and Windows Fax and Scan features are
-            enabled by default. These enable printing over the network, faxing, and scanning. You can also add support
-            for the LPD and LPR network printing protocols, although these are older and not as common–you’ll only need
-            them if you have to connect to a network printer requiring them. The Scan Management feature here is for
-            managing and monitoring scanners connected to a network. </p>
-        <p> <b>RAS Connection Manager Administration Kit (CMAK)</b>: This tool allows you to create custom remote access
-            profiles for VPNs. Unless you know you need this to administer a network, you don’t need it. Remote
-            Differential Compression API Support: This provides a fast algorithm for comparing synchronized files. Like
-            many other features, it’s only useful if an application specifically requires it RIP Listener: This service
-            listens for Routing Information Protocol announcements sent by routers. It’s only useful if you have a
-            router that supports the RIPv1 protocol. This may be useful on a corporate network, but won’t be useful at
-            home. </p>
-        <p> <b>Simple Network Management Protocol (SNMP)</b>: This is an old protocol for managing routers, switches,
-            and other network devices. It’s only useful if you work in an environment that uses this old protocol.
-            Simple TCPIP Services (i.e. echo, daytime etc): This includes a few optional network services. The “echo”
-            service could potentially be useful for network troubleshooting on some business networks, but otherwise
-            these won’t be useful. </p>
-        <p> <b>SMB 1.0/CIFS File Sharing Support</b>: This enables file and printer sharing with older versions of
-            Windows, ranging from Windows NT 4.0 to Windows XP and Windows Server 2003 R2. Linux and Mac operating
-            systems may also use the older SMB protocol for file and printer sharing. </p>
-        <p> <b>Telnet Client</b>: This provides a telnet command that allows you to remotely connect to the command-line
-            interface on computers and devices running a telnet server. Telnet is old and not secure. You really
-            shouldn’t be using telnet over the network these days, but this could be useful when connecting to an
-            ancient device. </p>
-        <p> <b>TFTP Client</b>: This provides a tftp command that allows you to transfer files to computers and devices
-            using the Trivial File Transfer Protocol. TFTP is also old and not secure, so you really shouldn’t be using
-            it either. But you may have to use it with some ancient devices. </p>
-        <p> <b>Windows Identity Foundation 3.5</b>: Older .NET applications may still require this, but .NET 4 includes
-            a new identity framework. You’ll only need to install this if you need to run an older .NET application that
-            needs it. </p>
-        <p> <b>Windows PowerShell 2.0</b>: PowerShell is a more advanced scripting and command-line environment than the
-            old Command Prompt. It’s enabled by default, but you can disable PowerShell, if you like. </p>
-        <p> <b>Windows Process Activation Service</b>: This is related to the Internet Information Services web server.
-            You’ll only need it if you run a server application that requires it. </p>
-        <p> <b>Windows Subsystem for Linux</b>: In Windows 10’s Anniversary Update, this service enables you to use the
-            Ubuntu Bash shell and run Linux applications on Windows 10. </p>
-        <p> <b>Windows TIFF iFilter</b>: This feature enables the Windows indexing service to analyze .TIFF files and
-            perform optical character recognition (OCR). It’s disabled by default as this is a CPU-intensive process.
-            But, if you use a lot of TIFF files–for example, if you regularly scan paper documents to TIFF–this could
-            potentially be a useful feature that allows you to search those scanned documents more easily. </p>
-        <p> <b>Work Folders Client</b>: This tool allows you to synchronize folders from a corporate network to your
-            computer. </p>
-        <p> <b>XPS Services</b>: This enables printing to XPS documents. Microsoft created this document format with
-            Windows Vista and it never took off, so you’re better off printing to PDF instead. Turn off this feature and
-            the XPS printer will vanish from your list of installed printers (though you can also just right-click the
-            XPS Printer in the Devices & Printers window and select “Remove Device”). </p>
-        <p> <b>XPS Viewer</b>: This application allows you to view XPS documents. </p>
+        <section>
+            <h3>current features</h3>
+            <p><b>.NET Framework 3.5 (includes .NET 2.0 and 3.0)</b>: You’ll need this installed to run applications
+                written for these versions of .NET. Windows will automatically install them if an application requires
+                them.</p>
+            <p><b>.NET Framework 4.6 Advanced Services</b>: These features are also automatically installed if
+                necessary. They’re only necessary to run applications that require them. </p>
+            <p><b>Active Directory Lightweight Directory Services</b>: This provides an LDAP (Lightweight Directory
+                Access Protocol) server. It runs as a Windows service and provides a directory for authenticating users
+                on a network. It’s a lightweight alternative to a full Active Directory server and will only be useful
+                on certain business networks.</p>
+            <p><b class="new">Containers</b>:</p>
+            <p><b class="new">Data Center Bridging</b>:</p>
+            <p><b class="new">Device Lockdown</b>:</p>
+            <p><b class="new">Guarded Host</b>:</p>
+            <p><b>Hyper-V</b>: This is Microsoft’s virtualization tool. It includes the underlying platform and services
+                and a graphical Hyper-V Manager tool for creating, managing, and using virtual machines. </p>
+            <p><b>Internet Explorer 11</b>: If you don’t need Microsoft’s legacy web browser, you can disable access to
+                Internet Explorer entirely. </p>
+            <p><b>Internet Information Services</b>: This provides Microsoft’s IIS web and FTP servers along with tools
+                for managing the servers. </p>
+            <p><b>Internet Information Services Hostable Web Core</b>: This allows applications to host a web server
+                using IIS inside their own process. You only need this installed if you need to run an application that
+                requires it. </p>
+            <p><b>Legacy Components (DIrectPlay)</b>:DirectPlay was part of DirectX, and was used for networking and
+                multiplayer gaming by some games. Windows 10 should automatically install it when you install an old
+                game that requires DIrectPlay. </p>
+            <p><b>Media Features (Windows Media Player)</b>: You can disable access to Windows Media Player from here,
+                if you have no use for it. </p>
+            <p><b>Microsoft Message Queue (MSMO) Server</b>: This old service improves communications on unreliable
+                networks by queuing messages rather than sending them immediately. This is only useful if you have a
+                business application that specifically requires and uses this feature. </p>
+            <p><b>Microsoft Print to PDF</b>: Windows 10’s included PDF printer can be disabled from here, if you like
+                (but it’s so useful, we don’t know why you would). </p>
+            <p><b>MultiPoint Connector</b>: This allows your computer to be monitored and managed by the MultiPoint
+                Manager and Dashboard applications. It’s only useful on corporate networks, and only if those networks
+                use these management tools. </p>
+            <p><b>Print and Document Services</b>: The Internet Printing Client and Windows Fax and Scan features are
+                enabled by default. These enable printing over the network, faxing, and scanning. You can also add
+                support for the LPD and LPR network printing protocols, although these are older and not as
+                common–you’ll only need them if you have to connect to a network printer requiring them. The Scan
+                Management feature here is for managing and monitoring scanners connected to a network. </p>
+            <p><b class="new">Remote Differential Compression API Support</b>:</p>
+            <p><b class="new">Service for NFS</b>:</p>
+            <p><b>Simple TCPIP Services (i.e. echo, daytime etc)</b>: This includes a few optional network services. The
+                “echo” service could potentially be useful for network troubleshooting on some business networks, but
+                otherwise these won’t be useful. </p>
+            <p><b>SMB 1.0/CIFS File Sharing Support</b>: This enables file and printer sharing with older versions of
+                Windows, ranging from Windows NT 4.0 to Windows XP and Windows Server 2003 R2. Linux and Mac operating
+                systems may also use the older SMB protocol for file and printer sharing. </p>
+            <p><b class="new">SMB Direct</b>:</p>
+            <p><b>Telnet Client</b>: This provides a telnet command that allows you to remotely connect to the
+                command-line interface on computers and devices running a telnet server. Telnet is old and not secure.
+                You really shouldn’t be using telnet over the network these days, but this could be useful when
+                connecting to an ancient device. </p>
+            <p><b>TFTP Client</b>: This provides a tftp command that allows you to transfer files to computers and
+                devices using the Trivial File Transfer Protocol. TFTP is also old and not secure, so you really
+                shouldn’t be using it either. But you may have to use it with some ancient devices. </p>
+            <p><b class="new">Virtual Machine Platform</b>:</p>
+            <p><b class="new">Windows Defender Application Guard</b>:</p>
+            <p><b class="new">Windows Hypervisor Platform</b>:</p>
+            <p><b>Windows Identity Foundation 3.5</b>: Older .NET applications may still require this, but .NET 4
+                includes a new identity framework. You’ll only need to install this if you need to run an older .NET
+                application that needs it. </p>
+            <p><b>Windows PowerShell 2.0</b>: PowerShell is a more advanced scripting and command-line environment than
+                the old Command Prompt. It’s enabled by default, but you can disable PowerShell, if you like. </p>
+            <p><b>Windows Process Activation Service</b>: This is related to the Internet Information Services web
+                server. You’ll only need it if you run a server application that requires it. </p>
+            <p><b class="new">Windows Projected File System</b>:</p>
+            <p><b class="new">Windows Sandbox</b>:</p>
+            <p><b>Windows Subsystem for Linux</b>: In Windows 10’s Anniversary Update, this service enables you to use
+                the Ubuntu Bash shell and run Linux applications on Windows 10. </p>
+            <p><b>Windows TIFF iFilter</b>: This feature enables the Windows indexing service to analyze .TIFF files and
+                perform optical character recognition (OCR). It’s disabled by default as this is a CPU-intensive
+                process. But, if you use a lot of TIFF files–for example, if you regularly scan paper documents to
+                TIFF–this could potentially be a useful feature that allows you to search those scanned documents more
+                easily. </p>
+            <p><b>Work Folders Client</b>: This tool allows you to synchronize folders from a corporate network to your
+                computer. </p>
+        </section>
+        <section>
+            <h3>removed features</h3>
+            <p><b>Embedded Shell Launcher</b>: This feature is required if you want to replace Windows 10’s Explorer.exe
+                shell with a custom shell. Microsoft’s documentation recommends using this feature for setting up a
+                traditional Windows desktop application in kiosk mode. </p>
+            <p><b>Isolated User Mode</b>: A new feature in Windows 10, this allows applications to run in a secure,
+                isolated space if they’re programmed to do so. You only need this a program you need to use requests or
+                requires it. Here’s a video with more technical details. </p>
+            <p><b>RAS Connection Manager Administration Kit (CMAK)</b>: This tool allows you to create custom remote
+                access profiles for VPNs. Unless you know you need this to administer a network, you don’t need it.
+                Remote Differential Compression API Support: This provides a fast algorithm for comparing synchronized
+                files. Like many other features, it’s only useful if an application specifically requires it RIP
+                Listener: This service listens for Routing Information Protocol announcements sent by routers. It’s only
+                useful if you have a router that supports the RIPv1 protocol. This may be useful on a corporate network,
+                but won’t be useful at home. </p>
+            <p><b>Simple Network Management Protocol (SNMP)</b>: This is an old protocol for managing routers, switches,
+                and other network devices. It’s only useful if you work in an environment that uses this old protocol.
+            </p>
+            <p><b>XPS Services</b>: This enables printing to XPS documents. Microsoft created this document format with
+                Windows Vista and it never took off, so you’re better off printing to PDF instead. Turn off this feature
+                and the XPS printer will vanish from your list of installed printers (though you can also just
+                right-click the XPS Printer in the Devices & Printers window and select “Remove Device”). </p>
+            <p><b>XPS Viewer</b>: This application allows you to view XPS documents. </p>
+        </section>
     </main>
 </body>
 
